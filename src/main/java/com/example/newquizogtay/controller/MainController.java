@@ -51,21 +51,20 @@ public class MainController {
 		result.setUsername(username); // Définir le nom d'utilisateur dans l'objet Result
 
 		// Obtenir les questions du quiz
-		QuestionForm qForm = quizService.getQuestions();
-		m.addAttribute("qForm", qForm); // Ajouter les questions au modèle
+		QuestionForm questionForm = quizService.getQuestions();
+		m.addAttribute("questionForm", questionForm); // Ajouter les questions au modèle
 
 		return "quiz.html"; // Retourner le nom de la vue à afficher
 	}
 
 	// Gérer les requêtes POST pour soumettre les réponses du quiz
 	@PostMapping("/submit")
-	public String submit(@ModelAttribute QuestionForm qForm, Model m) {
+	public String submit(@ModelAttribute QuestionForm questionForm, Model m) {
 		if(!submitted) { // Vérifier si le quiz n'a pas déjà été soumis
-			result.setTotalCorrect(quizService.getResult(qForm)); // Calculer le nombre de réponses correctes
+			result.setTotalCorrect(quizService.getResult(questionForm)); // Calculer le nombre de réponses correctes
 			quizService.saveScore(result); // Enregistrer le score
 			submitted = true; // Mettre à jour le statut de soumission
 		}
-
 		return "result.html"; // Retourner le nom de la vue à afficher
 	}
 

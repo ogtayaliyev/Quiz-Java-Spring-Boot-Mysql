@@ -15,7 +15,7 @@
 <div class="container1">
     <h1 class="bg-danger text-light">Only Select The Correct Answers</h1>
 
-    <div class="container2" th:each="ques, i: ${qForm.questions}" th:id="'question-' + ${i.index}"
+    <div class="container2" th:each="ques, i: ${questionForm.questions}" th:id="'question-' + ${i.index}"
          th:style="${i.index == 0 ? '' : 'display: none;'}">
         <form th:action="@{/submit}" th:method="post">
             <!-- Affichage de la question -->
@@ -55,7 +55,7 @@
     // Variable pour suivre l'index de la question actuelle
     var currentQuestionIndex = 0;
     // Nombre total de questions dans le formulaire (dans le modèle)
-    var questionsCount = /*[[${qForm.questions.size()}]]*/;
+    var questionsCount = /*[[${questionForm.questions.size()}]]*/;
 
     // Fonction appelée lors du clic sur le bouton "Next Question"
     function nextQuestion() {

@@ -16,12 +16,12 @@
 	
 	<!-- Main Container Start -->
 	<div class="main-container container py-5 px-4">
-		<h3 class="bg-danger text-center mb-5 p-2">Top Scores Of All Time</h3>
+		<h3 class="bg-success text-center mb-5 p-2">Meilleures Resultats</h3>
 		
-		<table class="bg-dark text-light">
+		<table class="">
 			<tr>
-				<th>Name</th>
-				<th>Score</th>
+				<th>Nom</th>
+				<th>Resultat</th>
 			</tr>
 			<tr th:each="score : ${scoreList}">
 				<td th:text="${score.username}"></td>

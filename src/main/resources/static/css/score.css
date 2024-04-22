@@ -16,6 +16,9 @@ body {
 table {
 	width: 100%;
 	text-align: center;
+	color: white;
+	font-family: "Agency FB";
+	font-size: 2rem;
 }
 
 tr {
