@@ -23,7 +23,7 @@
 				<th>Name</th>
 				<th>Score</th>
 			</tr>
-			<tr th:each="score : ${sList}">
+			<tr th:each="score : ${scoreList}">
 				<td th:text="${score.username}"></td>
 				<td th:text="${score.totalCorrect}"></td>
 			</tr>
