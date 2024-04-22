@@ -22,10 +22,7 @@
     <div class="container2" th:each="ques, i: ${questionForm.questions}" th:id="'question-' + ${i.index}"
          th:style="${i.index == 0 ? '' : 'display: none;'}">
         <form th:action="@{/submit}" th:method="post">
-<!--            <h1 th:text="${ques.quesId}">/5</h1>-->
-            <!-- Affichage de la question -->
-            <p class="title" th:text="${ques.title}"></p>
-            <!-- Affichage des options de réponse -->
+            <p class="title">Question <span th:text="${i.index + 1}"></span>: <span th:text="${ques.title}"></span></p>
             <div class="option">
                 <input type="radio" th:name="|questions[${i.index}].chose|" th:value="1"/>
                 <p th:text="${ques.optionA}"></p>
