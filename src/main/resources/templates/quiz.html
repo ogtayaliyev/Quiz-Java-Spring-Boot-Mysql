@@ -13,11 +13,16 @@
 
 
 <div class="container1">
-    <h1 class="bg-danger text-light">Only Select The Correct Answers</h1>
+    <h1 class="bg-danger text-light">Selectionnez une seule reponse</h1>
+    <div class="d-flex justify-content-center">
+        <p>Participant Nom:&nbsp;&nbsp;</p>
+        <p th:if="${result}" th:text="${result.username}"></p>
 
+    </div>
     <div class="container2" th:each="ques, i: ${questionForm.questions}" th:id="'question-' + ${i.index}"
          th:style="${i.index == 0 ? '' : 'display: none;'}">
         <form th:action="@{/submit}" th:method="post">
+<!--            <h1 th:text="${ques.quesId}">/5</h1>-->
             <!-- Affichage de la question -->
             <p class="title" th:text="${ques.title}"></p>
             <!-- Affichage des options de réponse -->
