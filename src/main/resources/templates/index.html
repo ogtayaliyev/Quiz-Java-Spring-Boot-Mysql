@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<title>Page d'accueil</title>
+	<style>
+		@import url(//fonts.googleapis.com/css?family=Lato:300:400);
+		h1 {
+			font-family: 'Lato', sans-serif;
+			font-weight:300;
+			letter-spacing: 2px;
+			font-size:48px;
+		}
+		p {
+			font-family: 'Lato', sans-serif;
+			letter-spacing: 1px;
+			font-size:14px;
+			color: #333333;
+		}
+		form{
+			position:absolute;
+			left:50%;
+			top:40%;
+			margin-left:-110px;
+			margin-top:-80px;
+			padding: 30px;
+			background: rgba(41, 87, 128, 0.555);
+			border-radius: 10px;
+			box-shadow: 13px 13px 30px -10px rgba(0, 0, 0, 0.527);
+			transition: 1s;
+			animation: login 2s infinite ease-in-out alternate;
+			font-family: Verdana, Geneva, Tahoma, sans-serif;
+		}
+
+
+		input {
+			justify-content: center;
+			align-items: center;
+			padding: 7px;
+			border: none;
+			border-radius: 5px;
+			background: rgba(245, 245, 245, 0.726);
+			color: Black;
+
+
+		}
+		.btn{
+			background: linear-gradient(TO TOP, rgb(25, 105, 253), rgba(165, 32, 253, 0.795));
+			width: 100%;
+			color: white;
+			transition: 2s;
+
+		}
+		.btn:hover{
+			background: white;
+			color: black;
+			box-shadow: inset 0 0 10px 2px #f0f, 0 0 18px 8px rgb(212, 0, 255);
+
+		}
+
+		@keyframes move-forever {
+			0% {
+				transform: translate3d(-90px,0,0);
+			}
+			100% {
+				transform: translate3d(85px,0,0);
+			}
+		}
+		@keyframes login{
+			100%{
+				transform: translateY(-20px);
+			}
+		}
+
+		@media (max-width: 768px) {
+			.waves {
+				height:40px;
+				min-height:40px;
+			}
+			.content {
+				height:30vh;
+			}
+			h1 {
+				font-size:24px;
+			}
+		}
+	</style>
+</head>
+<body>
+<div class="flip" th:style="'background-image: url(' + @{/images/01.jpg} + '); height: 100vh; background-repeat: no-repeat; background-size: cover;'">
+	<div class="login">
+		<form action="/quiz" method="POST">
+			<h3>Bienvenue</h3>
+			<input type="text" placeholder="Entrez votre pseudo" name="username"><br><br>
+			<button type="submit" class="btn btn-primary">Start Quiz</button>
+		</form>
+	</div>
+</div>
+</body>
+</html>
