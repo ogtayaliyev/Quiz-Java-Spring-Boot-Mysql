@@ -1,4 +1,4 @@
- # Application Quiz utilisant Java Spring Boot MVC et MySQL
+ # Application Quiz utilisant Java Spring Boot MVC et MySQL by Ogtay
 
 Cette application Quiz est développée en utilisant Java Spring Boot avec le modèle MVC et une base de données MySQL. L'application lit les questions à partir d'un fichier JSON nommé questions.json.
 
