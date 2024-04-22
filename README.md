@@ -1,6 +1,6 @@
  # Application Quiz utilisant Java Spring Boot Thymleaf MVC et MySQL by Ogtay
 
- **Languages HTML / CSS / JAVA**
+ **Languages HTML - CSS - JAVA - JS**
 
 Cette application Quiz est développée en utilisant Java Spring Boot avec le modèle MVC et une base de données MySQL. L'application lit les questions à partir d'un fichier JSON nommé questions.json.
 
