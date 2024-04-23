@@ -3,7 +3,8 @@
  **Languages HTML - CSS - JAVA - JS**
 
 Cette application Quiz est développée en utilisant Java Spring Boot avec le modèle MVC et une base de données MySQL. L'application lit les questions à partir d'un fichier JSON nommé questions.json.
-
+**Aperçu**
+![Capture d'écran du CV Responsif](./Capture d'écran 2024-04-22 115614.png.png)
 **_Installation_**
 Assurez-vous d'avoir Java JDK installé sur votre système. Vous pouvez le télécharger depuis le site officiel d'Oracle.
 Installez Apache Maven si ce n'est pas déjà fait. Vous pouvez le télécharger depuis le site officiel de Maven.
